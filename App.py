@@ -190,11 +190,97 @@ print(total_days)
 
 #Task: fuel report: throughout the rocket ship
 #Task: display the amount of fuel in each tank
-def generate_raport(main_tank, external_tank,hydrogen_tank):
-    output = """
-    --fuel report--
-    Main tank: {maint_tank},
-    External_tank{external_tank}
-    Hydrogen tank
 
-"""
+def generate_report(main_tank, external_tank, hydrogen_tank):
+    output = f"""Fuel Report:
+    Main tank: {main_tank}
+    External tank: {external_tank}
+    Hydrogen tank: {hydrogen_tank} 
+    """
+    print(output)
+generate_report(80, 70, 75)
+
+#use keywords argument in python 
+#Let's create a function that returns the estimated time of arrival by using the same value as the Apollo 11 mission as the default:
+from datetime import timedelta, datetime
+
+def arrival_time(hours=0):
+    now = datetime.now()
+    arrival = now + timedelta(hours=hours)
+    return arrival.strftime("Arrival: %A %H:%M")
+
+print(arrival_time())
+
+#Anoth example for key argument 
+#animal 
+def animal_classifications(animal): 
+    #animal dictionary 
+    animal_dictionary = {
+        "Dog": "Mammal",
+        "Eagle": "Bird",
+        "Shark": "Fish",
+        "Frog": "Amphibian",
+        "Cobra": "Reptile"
+    }
+    
+    return animal_dictionary.get(animal, "Unknown classification")
+
+print(animal_classifications("Dog"))
+print(animal_classifications("Eagle")) 
+print(animal_classifications("Tiger"))
+
+#user variable arguments 
+def variable_length(*arg):
+    print(arg)
+
+#variable length function that can calulate how many minutes until launch, give you how mich time each step is going to take:
+def sequence_time(*arg):
+    total_minutes = sum(arg)
+    if total_minutes < 60:
+        return f"total time to launch is {total_minutes} minutes"
+    else: 
+        return f"total time to launch {total_minutes/ 60} hours"
+    
+print(sequence_time(4, 14, 18))
+
+#example two with Exersice duration time 
+def total_exercise_time(*durations):
+    total_time = sum(durations)
+    if total_time < 60:
+        return f"Total minutes exercised today:  {total_time}"
+    else:
+        return f"Total hourse exersices today:{total_time}"
+
+print(total_exercise_time( 1, 15, 1))
+
+#kwargs -----------
+def variable_length(**kwargs): #kwargs allow to pass any number of name arguments to a function
+    print(kwargs)
+    
+#collect all the arguments in a function
+variable_length(tanks=1, day="Wednesday", pilots=3)
+{'tanks': 1, 'day': 'Wednesday', 'pilots': 3}
+
+#report the astronauts assigned to the mission
+def assigned_austronauts(**kwargs):
+    print(kwargs)
+
+assigned_austronauts(austronatus= 10, mission ="pluto", pilots=3) 
+{'austronatus': 10, "mission": "pluto", 'pilots': 3}
+
+#crewmemebers 
+def crew_members(**kwargs):
+    print(f"{len(kwargs)} austronauts assigned for this mission")
+    for title, name in kwargs.items(): 
+        print(f"{title}:{name}")
+
+crew_members(captain="Neil Armstrong", pilot="Buzz Aldrin", command_pilot="Michael Collins")
+
+#create an updated fuel report -----------
+#1.Create an updated fuel report function
+def fuel_report(**fuel_tank):
+    for name, value in fuel_tank.items():
+        print(f"{name}:{value}")
+
+fuel_report(main="50", exteral="100", emergency="60")
+              
