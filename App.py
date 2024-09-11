@@ -140,3 +140,61 @@ print(f'Each planet have an average of {average} moons')
 #Learnings
 #Acess all key values .key()
 #use . get{} to retrive all values + keys in a list. 
+#--------------------------------------------------------
+
+#python functions  - Organise data about a rocket 
+#create function , empty() mean no argument needed
+def rocket_parts():
+    print("payload", "propellant", "structure")
+    return 
+#call function 
+rocket_parts()
+
+def rocket_part():
+    return "payload", "propellant", "structure"
+output = rocket_parts()
+output
+
+#any(True)
+#str()
+
+#function to calculate the distance insice the spacecraft 
+def disance_from_earth(destination):
+    if destination  == 'Moon':
+        return "238,455"
+    else:
+        return "unable to comput that destination"
+disance_from_earth("Moon") 
+
+def distance_from_earth(destination):
+    if destination == "Moon":
+        return "238,855"
+    else:
+        return "Unable to compute to that destination"
+print(distance_from_earth("Moon"))
+
+#calculate how many days it take 
+#Let's create a function that can calculate how many days it takes to reach a destination, given distance and a constant speed:
+
+#multiple arguments 
+def days_to_complete(distance, speed):
+    hours = distance/speed
+    return hours/24
+days_to_complete(238855, 75)
+print(days_to_complete(238855, 75))
+
+#avrunda det 
+total_days = days_to_complete(238855, 75)
+round(total_days)
+print(total_days)
+
+#Task: fuel report: throughout the rocket ship
+#Task: display the amount of fuel in each tank
+def generate_raport(main_tank, external_tank,hydrogen_tank):
+    output = """
+    --fuel report--
+    Main tank: {maint_tank},
+    External_tank{external_tank}
+    Hydrogen tank
+
+"""
