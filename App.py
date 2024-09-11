@@ -99,3 +99,44 @@ for value in rainfall.values():
 
 #skriv ut listan
 print(f'if there was any rainfall {total_rainfall} cm in the last quarter')
+
+#dynamic programming with 
+#task -  you will calculate both the total number of moons in the solar system and the average number of moons a planet has. 
+
+planets_moon = {
+    'mercury': 0,
+    'venus':0,
+    'earth':1,
+    'mars':2,
+    'jupyter':79,
+    'saturn':82,
+    'uranus':27,
+    'neptune':14,
+    'pluto':5,
+    'haumea':2,
+    'makemake':1,
+    'eris':1
+
+}
+
+#all value of the list planet_moon stores in moons
+moons = planets_moon.values()
+
+#obtain the total number of plantes and store the value in a valriable total planet 
+total_planets = len(planets_moon.keys())
+#calculate avg
+
+#Start by creating a variable named total_moons
+total_moons = 0
+#Then add a for loop to loop through the list of moons, adding each value to total_moons
+for moon in moons: 
+    total_moons = total_moons + moon 
+
+
+average = total_moons / total_planets
+
+print(f'Each planet have an average of {average} moons')
+
+#Learnings
+#Acess all key values .key()
+#use . get{} to retrive all values + keys in a list. 
