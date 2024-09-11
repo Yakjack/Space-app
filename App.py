@@ -87,3 +87,15 @@ if 'december' in rainfall:
 else:
     #om inte december finns skapar vi den med värdet 1 
     rainfall['december'] = 1
+
+
+#retrrive all values
+# total rainfall at al 
+total_rainfall = 0 
+#get all values in the list 
+for value in rainfall.values(): 
+    #lägg till värdet från varje rad i listan till totalen
+    total_rainfall = total_rainfall + value
+
+#skriv ut listan
+print(f'if there was any rainfall {total_rainfall} cm in the last quarter')
