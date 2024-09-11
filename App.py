@@ -78,3 +78,12 @@ rainfall = {
 #display list 
 for key in rainfall.keys(): #för varje nyckel i tabell rainfall(nyckel)
     print(f'{key}: {rainfall[key]} cm') #skriv ut nyckel 
+
+#determine if key exist in dictionary 
+#om order ' december ' finns i listan rainfall kör kod nedanför 
+if 'december' in rainfall: 
+    # i listan rainfall värder 'december vill vi öka med 1(+1)
+    rainfall['december'] = rainfall['december'] + 1 
+else:
+    #om inte december finns skapar vi den med värdet 1 
+    rainfall['december'] = 1
