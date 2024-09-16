@@ -1,5 +1,6 @@
 Feature list:
-1. 🌍 Planetary Information: Get detailed information about planets in our solar system. 
+1. 🌍 Planetary Information: 
+    - Get detailed information about planets in our solar system. 
 2. 🌌 Star Charts: View interactive star maps, constellations, and galaxies.
 3. 🚀 Space Missions: Track past, present, and future space missions. 
 4. 🛰 Real-Time Space Events: Stay updated on astronomical events like eclipses, meteor showers, and planetary transits. 
