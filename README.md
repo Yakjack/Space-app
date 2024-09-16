@@ -33,10 +33,8 @@ Feel free to explore the repository and review the code. If you have any feedbac
 This repository is for personal learning purposes and is licensed under the [MIT License](LICENSE).
 ------------
 
-## Space application example 
-To utalize all learnings so far. I have started to build a space application to test and improve durig my python learning journey..
-🚀 Space App
-Space App is a Python-based application designed to explore the mysteries of space through various features such as planetary information, star charts, space missions, and more. It allows users to interact with a rich database of celestial objects and track real-time space events. 🌌
+Space Application Example
+This project is a space-themed application built as part of my Python learning journey. The goal is to apply all the concepts and skills I've learned so far while continuously improving and expanding the app. It serves as a hands-on project to explore various Python features and best practices while creating an interactive and educational space experience. 🌌
 
 Table of Contents
 Features
